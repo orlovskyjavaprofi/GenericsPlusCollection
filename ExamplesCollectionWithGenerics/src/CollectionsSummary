@@ -1,0 +1,18 @@
+Following important features of collection should me learned by any java developer!
+=============================================================================
+Hashset: unordered, unsorted, iterates in random order
+Hashmap: not thread safe, unsorted, unordered
+Hashtable: synchronized, thread safe, unsorted, unordered
+Linkedlist: sorted, iteration is slower
+LinkedHashSet: ordered, iterates in order of insertion
+LinkedHashmap: slower insertion and deletion,faster insertion
+ArrayList: Insertion and deletion are slower, not thread safe, random access
+Vector: Threadsafe
+Treemap: sorted order
+LinkedList: iteration slower than ArrayList, fast insertion deletion
+Treeset:  natural order, slower,sorted
+
+StringBuilder and StringBuffer
+===============================================
+StringBuffer: Threadsafe , not immutable due to thread safety is little bit slower then StringBuilder
+StringBuilder: not synchronized, not threadsafe, faster then StringBuffer.  
