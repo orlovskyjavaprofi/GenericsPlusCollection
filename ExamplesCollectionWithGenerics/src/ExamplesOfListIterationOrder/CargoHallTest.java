@@ -13,9 +13,9 @@ public class CargoHallTest {
 	public void addSpaceshipsToCargohall() throws Exception{
 		cargohall.add(klingonStrike);
 		cargohall.add(federationHope);
-		cargohall.add(romulansCloak);
+	
 		
-		assertThat(cargohall, contains(klingonStrike, federationHope, romulansCloak));
+		assertThat(cargohall, contains(klingonStrike, federationHope));
 	}
 	
 	@Test
@@ -28,6 +28,14 @@ public class CargoHallTest {
 		assertThat(cargohall, contains(klingonStrike, romulansCloak));
 	}
 
+	@Test
+	public void tryToReplaceMissingSpaceships() throws Exception
+	{
+		cargohall.add(romulansCloak);
+		cargohall.replace(klingonStrike, federationHope);
+		
+		assertThat(cargohall, contains(romulansCloak));
+	}
 	
 
 }

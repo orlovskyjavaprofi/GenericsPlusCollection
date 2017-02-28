@@ -65,8 +65,9 @@ public class Spaceship {
 		   int numberOfPhotonTorpedos = this.getNumberOfPhotonTorpedos();
 			
 		   String result = "\n Spaceship name: "+ spaceShipName+ "\n Number of engines: "+numberOfEngines+
-				            "\n Number of plasma weapons: "+numberOfPlasmaWeapons+"\n Number Of photon Torpedos: "+numberOfPhotonTorpedos+"\n"+
-				   "====================================================================================";
+				           "\n Number of plasma weapons: "+numberOfPlasmaWeapons+"\n Number Of photon Torpedos: "+
+				            numberOfPhotonTorpedos+"\n"+
+				            "====================================================================================";
 		return result;
 	}
 

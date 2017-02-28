@@ -22,6 +22,7 @@ public class Cargohall implements Iterable<Spaceship>{
 	        {
 	            spaceships.set(index, newSpaceship);
 	        }
+	        
 	    }
 	
 
