@@ -1,13 +1,17 @@
-package ExampleofCollection;
+package ExamplesOfListIterationOrder;
 
-public class SpaceShip {
+public class Spaceship {
 
 	private String spaceShipName;
 	private int numberOfEngines;
 	private int numberOfPlasmaWeapons;
 	private int numberOfPhotonTorpedos;
 
-	public SpaceShip(String spaceShipName, int numberOfEngines, int numberOfPlasmaWeapons, int numberOfPhotonTorpedos) {
+	public Spaceship(){
+		
+	}
+	
+	public Spaceship(String spaceShipName, int numberOfEngines, int numberOfPlasmaWeapons, int numberOfPhotonTorpedos) {
 
 		this.spaceShipName = spaceShipName;
 		this.numberOfEngines = numberOfEngines;
@@ -65,5 +69,6 @@ public class SpaceShip {
 				   "====================================================================================";
 		return result;
 	}
+
 	
 }

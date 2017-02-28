@@ -4,31 +4,33 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+import ExamplesOfListIterationOrder.Spaceship;
+
 public class TestSpaceship {
 
 	public static void main(String[] args) {
-		SpaceShip klingonStrike = new SpaceShip("Bar'ta", 5, 20, 50);
-		SpaceShip federationHope = new SpaceShip("Voyager", 2, 5, 10);
-		SpaceShip romulansCloak = new SpaceShip("Kerata", 6, 25, 100);
+		Spaceship klingonStrike = new Spaceship("Bar'ta", 5, 20, 50);
+		Spaceship federationHope = new Spaceship("Voyager", 2, 5, 10);
+		Spaceship romulansCloak = new Spaceship("Kerata", 6, 25, 100);
          
-		Collection<SpaceShip> spaceships = new ArrayList<SpaceShip>(); //Java 6 Versions declaration
+		Collection<Spaceship> spaceships = new ArrayList<Spaceship>(); //Java 6 Versions declaration
 		addShipToTheCollection(klingonStrike, federationHope, romulansCloak, spaceships);		
 		showTheListOfSpaceShips(spaceships);
 		System.out.println("\nCurrently in hangar are " + spaceships.size()+" spaceships available");
 	}
 
-	public static void showTheListOfSpaceShips(Collection<SpaceShip> spaceships) {
-		final Iterator<SpaceShip> spaceshipsIterator = spaceships.iterator();
+	public static void showTheListOfSpaceShips(Collection<Spaceship> spaceships) {
+		final Iterator<Spaceship> spaceshipsIterator = spaceships.iterator();
 		while(spaceshipsIterator.hasNext()){
-			SpaceShip spaceship = spaceshipsIterator.next();
+			Spaceship spaceship = spaceshipsIterator.next();
 			checkremoveAmountOfPhotonTorpedos(spaceshipsIterator, spaceship);
 		}
 		System.out.println("new list of ships: ");
 		System.out.print(spaceships);
 	}
 
-	public static void checkremoveAmountOfPhotonTorpedos(final Iterator<SpaceShip> spaceshipsIterator,
-			SpaceShip spaceship) {
+	public static void checkremoveAmountOfPhotonTorpedos(final Iterator<Spaceship> spaceshipsIterator,
+			Spaceship spaceship) {
 		if (spaceship.getNumberOfPhotonTorpedos() >50){
 			System.out.print(spaceship);
 			System.out.println("\n It's to many torpedos for one ship! ");
@@ -41,8 +43,8 @@ public class TestSpaceship {
 		}
 	}
 
-	public static void addShipToTheCollection(SpaceShip klingonStrike, SpaceShip federationHope,
-			SpaceShip romulansCloak, Collection<SpaceShip> spaceships) {
+	public static void addShipToTheCollection(Spaceship klingonStrike, Spaceship federationHope,
+			Spaceship romulansCloak, Collection<Spaceship> spaceships) {
 		spaceships.add(klingonStrike);
 		spaceships.add(federationHope);
 		spaceships.add(romulansCloak);
