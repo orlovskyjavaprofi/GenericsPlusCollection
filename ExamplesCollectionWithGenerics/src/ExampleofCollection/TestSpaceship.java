@@ -14,6 +14,7 @@ public class TestSpaceship {
 		Collection<SpaceShip> spaceships = new ArrayList<SpaceShip>(); //Java 6 Versions declaration
 		addShipToTheCollection(klingonStrike, federationHope, romulansCloak, spaceships);		
 		showTheListOfSpaceShips(spaceships);
+		System.out.println("\nCurrently in hangar are " + spaceships.size()+" spaceships available");
 	}
 
 	public static void showTheListOfSpaceShips(Collection<SpaceShip> spaceships) {
