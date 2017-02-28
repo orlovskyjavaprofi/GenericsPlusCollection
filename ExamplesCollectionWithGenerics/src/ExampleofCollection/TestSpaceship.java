@@ -20,19 +20,24 @@ public class TestSpaceship {
 		final Iterator<SpaceShip> spaceshipsIterator = spaceships.iterator();
 		while(spaceshipsIterator.hasNext()){
 			SpaceShip spaceship = spaceshipsIterator.next();
-			
-			if (spaceship.getNumberOfPhotonTorpedos() >50){
-				System.out.print(spaceship);
-				System.out.println("\n It's to many torpedos for one ship!");
-				System.out.println("Removing the ship");
-				spaceshipsIterator.remove();
-			}else{
-				System.out.println("This ship has enough photon torpedos!");
-				System.out.print(spaceship);
-			}
+			checkremoveAmountOfPhotonTorpedos(spaceshipsIterator, spaceship);
 		}
-		System.out.println("New list of ships: ");
+		System.out.println("new list of ships: ");
 		System.out.print(spaceships);
+	}
+
+	public static void checkremoveAmountOfPhotonTorpedos(final Iterator<SpaceShip> spaceshipsIterator,
+			SpaceShip spaceship) {
+		if (spaceship.getNumberOfPhotonTorpedos() >50){
+			System.out.print(spaceship);
+			System.out.println("\n It's to many torpedos for one ship! ");
+			System.out.print("\nRemoving the ship and show the ");
+			spaceshipsIterator.remove();
+		}else{
+			System.out.println("\nThis ships has enough photon torpedos!");
+			System.out.println("====================================================================================");
+			System.out.print(spaceship);
+		}
 	}
 
 	public static void addShipToTheCollection(SpaceShip klingonStrike, SpaceShip federationHope,
