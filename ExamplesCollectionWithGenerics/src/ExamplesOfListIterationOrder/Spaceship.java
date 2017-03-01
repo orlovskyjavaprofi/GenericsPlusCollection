@@ -1,5 +1,8 @@
 package ExamplesOfListIterationOrder;
 
+import java.util.Comparator;
+import java.util.Objects;
+
 public class Spaceship {
 
 	private String spaceShipName;
@@ -7,10 +10,6 @@ public class Spaceship {
 	private int numberOfPlasmaWeapons;
 	private int numberOfPhotonTorpedos;
 
-	public Spaceship(){
-		
-	}
-	
 	public Spaceship(String spaceShipName, int numberOfEngines, int numberOfPlasmaWeapons, int numberOfPhotonTorpedos) {
 
 		this.spaceShipName = spaceShipName;
@@ -71,5 +70,18 @@ public class Spaceship {
 		return result;
 	}
 
+	public int hashCode()
+	{
+	   return Objects.hash(spaceShipName, numberOfEngines);
+	}
 	
+	  public boolean equals(final Object o)
+	    {
+	        if (!(o instanceof Spaceship)) return false;
+
+	        final Spaceship spaceship = (Spaceship) o;
+
+	        return Objects.equals(numberOfEngines, spaceship.numberOfEngines)
+	            && Objects.equals(spaceShipName, spaceship.spaceShipName);
+	    }
 }
